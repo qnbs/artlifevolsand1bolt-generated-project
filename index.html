@@ -1,0 +1,53 @@
+<html>
+      <head>
+        <title>Artificial Life - Evolutions-Sandbox</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+      </head>
+      <body>
+        <div id="canvas-container"></div>
+        <div id="ui-container">
+          <div id="control-panel">
+            <div class="control-group">
+              <label for="mutation-rate">Mutationsrate:</label>
+              <input type="range" id="mutation-rate" min="0" max="100" value="5">
+            </div>
+            <div class="control-group">
+              <label for="population-size">Populationsgröße:</label>
+              <input type="range" id="population-size" min="10" max="1000" value="100">
+            </div>
+            <div class="control-group">
+              <label for="resource-density">Ressourcendichte:</label>
+              <input type="range" id="resource-density" min="10" max="100" value="50">
+            </div>
+            <div class="control-group">
+              <label for="speed">Simulationsgeschwindigkeit:</label>
+              <input type="range" id="speed" min="1" max="10" value="5">
+            </div>
+            <button id="start-button">Start</button>
+            <button id="stop-button">Stop</button>
+            <button id="reset-button">Zurücksetzen</button>
+          </div>
+          <div id="stats-panel">
+            <div class="stat">
+              <span class="label">Generation:</span>
+              <span class="value" id="generation"></span>
+            </div>
+            <div class="stat">
+              <span class="label">Populationsgröße:</span>
+              <span class="value" id="population"></span>
+            </div>
+            <div class="stat">
+              <span class="label">Durchschnittliche Fitness:</span>
+              <span class="value" id="average-fitness"></span>
+            </div>
+            <div class="stat">
+              <span class="label">Gen-Diversität:</span>
+              <span class="value" id="diversity"></span>
+            </div>
+          </div>
+        </div>
+        <script src="main.js"></script>
+      </body>
+    </html>
